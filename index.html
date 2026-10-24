@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Smart School Portal | ระบบสารสนเทศสถานศึกษาดิจิทัล</title>
+  <title>Smart School By: K.Title | ระบบสารสนเทศสถานศึกษาดิจิทัล</title>
   
   <!-- Tailwind CSS & Font Awesome -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -85,9 +85,7 @@
   <!-- Main Content Container -->
   <main class="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6 lg:py-8">
 
-    <!-- ========================================== -->
-    <!-- AUTH SECTION (LOGIN)                       -->
-    <!-- ========================================== -->
+    <!-- AUTH SECTION (LOGIN) -->
     <div id="authSection" class="max-w-md mx-auto my-8 md:my-14 card-glass p-7 md:p-9 rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-200/80 relative overflow-hidden">
       <div class="text-center mb-6">
         <div class="w-14 h-14 bg-indigo-50 text-brand-600 rounded-2xl mx-auto flex items-center justify-center text-2xl mb-3 shadow-inner">
@@ -123,18 +121,15 @@
         </button>
 
         <div class="bg-indigo-50/70 border border-indigo-100 rounded-xl p-3 text-[11px] text-slate-600 space-y-1">
-          <p class="font-bold text-brand-700"><i class="fa-solid fa-circle-info mr-1"></i> ข้อมูลทดสอบเริ่มต้น:</p>
+          <p class="font-bold text-brand-700"><i class="fa-solid fa-circle-info mr-1"></i> บัญชีทดสอบเริ่มต้น:</p>
           <p>• ครูผู้สอน: <b class="font-mono text-slate-800">T001</b> (รหัส: <span class="font-mono">12345678</span>)</p>
-          <p>• นักเรียน ม.2/1: <b class="font-mono text-slate-800">S111</b> ถึง <b class="font-mono text-slate-800">S136</b> (รหัส: 1-8 ช่น <span class="font-mono">12345678</span>)</p>
+          <p>• นักเรียน: <b class="font-mono text-slate-800">S110</b> (รหัส: <span class="font-mono">0110</span>), <b class="font-mono text-slate-800">S111</b> (รหัส: <span class="font-mono">0111</span>)</p>
         </div>
       </form>
     </div>
 
-    <!-- ========================================== -->
-    <!-- TEACHER DASHBOARD                          -->
-    <!-- ========================================== -->
+    <!-- TEACHER DASHBOARD -->
     <div id="teacherDashboard" class="hidden space-y-6">
-      
       <!-- Metrics Bento Grid -->
       <div class="grid grid-cols-3 gap-3 md:gap-5">
         <div class="bg-white p-4 md:p-5 rounded-3xl border border-slate-200/80 shadow-xs relative overflow-hidden">
@@ -156,7 +151,7 @@
             </div>
           </div>
           <p id="metricAtt" class="font-num text-2xl md:text-3xl font-extrabold text-emerald-600">0</p>
-          <span class="text-[11px] text-emerald-600 font-medium">บันทึกผ่าน GPS ประตูเช้า</span>
+          <span class="text-[11px] text-emerald-600 font-medium">ผ่าน GPS ประตูเช้า</span>
         </div>
 
         <div class="bg-white p-4 md:p-5 rounded-3xl border border-slate-200/80 shadow-xs relative overflow-hidden">
@@ -171,7 +166,7 @@
         </div>
       </div>
 
-      <!-- Teacher Navigation Segmented Control -->
+      <!-- Navigation Segmented Control -->
       <div class="flex bg-slate-200/70 p-1.5 rounded-2xl text-xs md:text-sm font-semibold border border-slate-200">
         <button onclick="switchTeacherTab('classAtt')" id="tabClassAttBtn" class="flex-1 py-2.5 rounded-xl bg-white text-brand-600 shadow-sm transition">
           <i class="fa-solid fa-clipboard-user mr-1.5"></i> เช็กชื่อห้องเรียน
@@ -184,10 +179,8 @@
         </button>
       </div>
 
-      <!-- Tab 1: เช็คชื่อห้องเรียน (Speed Mode + Quick Actions) -->
+      <!-- Tab 1: เช็คชื่อห้องเรียน -->
       <div id="teacherClassAttPanel" class="bg-white p-5 md:p-7 rounded-3xl border border-slate-200/80 shadow-sm space-y-5">
-        
-        <!-- Controls Bar -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
           <div>
             <label class="block text-xs font-semibold text-slate-600 mb-1">เลือกห้องเรียน</label>
@@ -220,7 +213,6 @@
           </div>
         </div>
 
-        <!-- Student Self-Check Toggle Card -->
         <div class="p-4 md:p-5 bg-gradient-to-r from-indigo-50/90 to-brand-50/70 border border-indigo-100 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-4">
           <div class="space-y-1 text-center md:text-left">
             <div class="flex items-center justify-center md:justify-start space-x-2">
@@ -234,7 +226,6 @@
           </button>
         </div>
 
-        <!-- Quick Attendance Toolbar (Speed Feature) -->
         <div class="flex flex-wrap items-center justify-between gap-3 pt-1 border-t border-slate-100">
           <div class="flex items-center space-x-2 text-xs">
             <span class="text-slate-400 font-medium">สรุปสถานะคาบนี้:</span>
@@ -244,7 +235,6 @@
             <span id="badgeCountAbsent" class="px-2 py-0.5 rounded-lg bg-rose-50 text-rose-700 font-bold border border-rose-200">ขาด: 0</span>
           </div>
 
-          <!-- ปุ่มช่วยชีวิต: เช็คมาทุกคนในคลิกเดียว -->
           <div class="flex items-center space-x-2">
             <button onclick="markAllPresent()" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold shadow-xs transition active:scale-95 flex items-center space-x-1.5">
               <i class="fa-solid fa-check-double"></i>
@@ -253,7 +243,6 @@
           </div>
         </div>
 
-        <!-- Roster Table (Desktop & Tablets) -->
         <div class="overflow-hidden rounded-2xl border border-slate-200/90 shadow-2xs">
           <table class="w-full text-left text-xs">
             <thead class="bg-slate-50 text-slate-600 uppercase border-b border-slate-200 text-[11px] font-bold tracking-wider">
@@ -270,7 +259,6 @@
           </table>
         </div>
 
-        <!-- Sticky Save Button -->
         <div class="flex justify-between items-center pt-2">
           <p class="text-[11px] text-slate-400">*เมื่อปรับสถานะเรียบร้อยแล้ว กดปุ่มบันทึกเพื่อซิงก์ข้อมูลลง Google Sheets</p>
           <button id="btnSaveAttendance" onclick="saveAttendanceChangesFast()" class="bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-700 hover:to-indigo-700 text-white font-semibold px-7 py-3 rounded-xl text-xs md:text-sm shadow-md shadow-brand-500/25 transition active:scale-95 flex items-center space-x-2">
@@ -286,8 +274,8 @@
           <i class="fa-solid fa-file-circle-plus text-brand-600"></i> มอบหมายงานและสร้างใบงานใหม่
         </h4>
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">หัวข้องาน / ชื่องาน</label>
-          <input type="text" id="hwTitle" placeholder="เช่น ใบกิจกรรมที่ 1 การทดลองความน่าจะเป็น" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm outline-none focus:ring-2 focus:ring-brand-500 font-medium">
+          <label class="block text-xs font-semibold text-slate-700 mb-1">หัวข้องาน / ชื่องาน <span class="text-rose-500">*</span></label>
+          <input type="text" id="hwTitle" placeholder="เช่น ใบกิจกรรมที่ 1 การแก้สมการเชิงเส้น" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm outline-none focus:ring-2 focus:ring-brand-500 font-medium">
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
           <div>
@@ -301,7 +289,7 @@
             </select>
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">รายวิชา</label>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">รายวิชา <span class="text-rose-500">*</span></label>
             <input type="text" id="hwSubject" value="คณิตศาสตร์พื้นฐาน" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm outline-none focus:ring-2 focus:ring-brand-500 font-medium">
           </div>
           <div>
@@ -315,7 +303,7 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">กำหนดส่งงาน</label>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">กำหนดส่งงาน <span class="text-rose-500">*</span></label>
             <input type="datetime-local" id="hwDueDate" class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm outline-none focus:ring-2 focus:ring-brand-500 font-num">
           </div>
           <div class="flex items-center space-x-2 pt-2 md:pt-5">
@@ -327,7 +315,7 @@
           <label class="block text-xs font-semibold text-slate-700 mb-1">คำชี้แจงในการทำใบงาน</label>
           <textarea id="hwDesc" rows="3" placeholder="อธิบายคำสั่งหรือเกณฑ์การส่งงาน..." class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm outline-none focus:ring-2 focus:ring-brand-500"></textarea>
         </div>
-        <button onclick="submitNewAssignment()" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl shadow-md shadow-brand-500/20 text-sm transition active:scale-[0.99] flex items-center justify-center space-x-2">
+        <button id="btnSubmitHw" onclick="submitNewAssignment()" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl shadow-md shadow-brand-500/20 text-sm transition active:scale-[0.99] flex items-center justify-center space-x-2">
           <i class="fa-solid fa-cloud-arrow-up"></i>
           <span>เผยแพร่การบ้านไปยังห้องเรียน</span>
         </button>
@@ -338,7 +326,7 @@
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 border-b pb-3">
           <div>
             <h4 class="font-bold text-slate-800 text-base">ติดตามและตรวจการบ้าน</h4>
-            <p class="text-[11px] text-slate-400">เลือกรายการการบ้านเพื่อดูความคืบหน้าการส่งงาน</p>
+            <p class="text-[11px] text-slate-400">เลือกรายการการบ้านเพื่อดูความคืบหน้าการส่งงานและให้คะแนน</p>
           </div>
           <select id="teacherAssignmentDropdown" onchange="loadAssignmentSubmissionsAndMissing()" class="w-full md:w-80 px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs outline-none focus:ring-2 focus:ring-brand-500 font-medium">
             <option value="">-- เลือกการบ้านเพื่อตรวจ --</option>
@@ -366,11 +354,8 @@
       </div>
     </div>
 
-    <!-- ========================================== -->
-    <!-- STUDENT DASHBOARD                          -->
-    <!-- ========================================== -->
+    <!-- STUDENT DASHBOARD -->
     <div id="studentDashboard" class="hidden space-y-6">
-      
       <!-- Digital Futuristic Student Card -->
       <div class="relative bg-gradient-to-tr from-slate-900 via-indigo-950 to-brand-900 text-white p-6 md:p-8 rounded-3xl shadow-xl shadow-indigo-950/25 overflow-hidden border border-white/10">
         <div class="absolute -right-10 -bottom-10 w-52 h-52 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -378,7 +363,7 @@
           <div class="space-y-2">
             <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-semibold text-brand-200 border border-white/10">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>สถานะ: บัญชีนักเรียน ม.2/1 พร้อมใช้งาน</span>
+              <span>สถานะ: บัญชีนักเรียนพร้อมใช้งาน</span>
             </div>
             <h2 id="studentCardName" class="text-2xl md:text-3xl font-bold tracking-tight">ชื่อนักเรียน</h2>
             <p id="studentCardInfo" class="text-xs md:text-sm text-slate-300 font-normal"></p>
@@ -478,12 +463,9 @@
 
   </main>
 
-  <!-- ========================================== -->
-  <!-- JAVASCRIPT LOGIC                           -->
-  <!-- ========================================== -->
+  <!-- JAVASCRIPT LOGIC -->
   <script>
-    // URL Web App จาก Apps Script ของคุณ
-    const APPS_SCRIPT_API_URL = "https://script.google.com/macros/s/AKfycbxeEzyPhWRyMkYXDI7GvxMH4hzS-kh1fyWAlwJpmx9hg9cx1-GGqp-vmDCrwIf3LtQ_/exec";
+    const APPS_SCRIPT_API_URL = "https://script.google.com/macros/s/AKfycbzd8A00nEWIOZWWCd90VfIu8ZrgXYj1-nwPwbLg3FIyOt5JxFZvQ9xqkBPVTL2VWMIU/exec";
     const GOOGLE_MAPS_API_KEY = "AIzaSyB0HgicYPObOhce6f0MAevV40P_FUNGjoQ"; 
 
     let SCHOOL_COORDS = [16.246825, 103.252384];
@@ -496,7 +478,6 @@
     let isSessionOpenCache = false;
     let rosterContext = null;
 
-    // Toast Notification
     function showToast(message, type = 'info') {
       const container = document.getElementById('toastContainer');
       const toast = document.createElement('div');
@@ -618,13 +599,12 @@
     }
 
     // ==========================================
-    // TEACHER ENGINE & HIGH-SPEED ATTENDANCE
+    // TEACHER LOGIC
     // ==========================================
     async function loadTeacherInitialDashboard() {
       const room = document.getElementById('teacherSelectRoom').value;
       const subject = document.getElementById('teacherSelectSubject').value.trim();
       
-      // ดึงข้อมูลทั้ง Dashboard ใน 1 คำขอเดียว (เร็วสุด)
       const res = await callApi("getTeacherDashboard", { classRoom: room, subject: subject });
       if (res.success) {
         document.getElementById('metricTotal').innerText = res.metrics.totalStudents;
@@ -697,11 +677,10 @@
       const target = currentRosterCache.find(s => s.id === id);
       if (target) {
         target.status = newStatus;
-        filterRosterLive(); // เรนเดอร์ใหม่พร้อมรักษาสถานะ Search
+        filterRosterLive();
       }
     }
 
-    // ฟังก์ชันช่วยชีวิตครู: เช็คมาทั้งห้องในคลิกเดียว
     function markAllPresent() {
       currentRosterCache.forEach(st => st.status = 'มาตรงเวลา');
       filterRosterLive();
@@ -781,6 +760,143 @@
       document.getElementById('tabClassAttBtn').className = tab === 'classAtt' ? "flex-1 py-2.5 rounded-xl bg-white text-brand-600 shadow-sm transition" : "flex-1 py-2.5 rounded-xl text-slate-600 hover:text-slate-800 transition";
       document.getElementById('tabHwBtn').className = tab === 'createHw' ? "flex-1 py-2.5 rounded-xl bg-white text-brand-600 shadow-sm transition" : "flex-1 py-2.5 rounded-xl text-slate-600 hover:text-slate-800 transition";
       document.getElementById('tabTrackHwBtn').className = tab === 'trackHw' ? "flex-1 py-2.5 rounded-xl bg-white text-brand-600 shadow-sm transition" : "flex-1 py-2.5 rounded-xl text-slate-600 hover:text-slate-800 transition";
+    }
+
+    // ฟังก์ชันสร้างและเผยแพร่การบ้าน (Tab 2)
+    async function submitNewAssignment() {
+      const title = document.getElementById('hwTitle').value.trim();
+      const classRoom = document.getElementById('hwClassRoom').value;
+      const subject = document.getElementById('hwSubject').value.trim();
+      const maxScore = document.getElementById('hwMaxScore').value;
+      const fileUrl = document.getElementById('hwFileUrl').value.trim();
+      const dueDate = document.getElementById('hwDueDate').value;
+      const allowLate = document.getElementById('hwAllowLate').checked;
+      const description = document.getElementById('hwDesc').value.trim();
+
+      if (!title) return showToast("กรุณากรอกหัวข้องาน / ชื่องาน", "warning");
+      if (!subject) return showToast("กรุณากรอกรายวิชา", "warning");
+      if (!dueDate) return showToast("กรุณาระบุกำหนดส่งงาน", "warning");
+
+      if (fileUrl && !/^https?:\/\/[^\s]+$/i.test(fileUrl)) {
+        return showToast("ลิงก์ไฟล์ต้องขึ้นต้นด้วย http:// หรือ https://", "warning");
+      }
+
+      const btn = document.getElementById('btnSubmitHw');
+      btn.disabled = true;
+      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i> กำลังเผยแพร่งาน...`;
+
+      const payload = {
+        title: title,
+        description: description,
+        subject: subject,
+        classRoom: classRoom,
+        fileUrl: fileUrl,
+        dueDate: dueDate,
+        allowLate: allowLate,
+        maxScore: Number(maxScore) || 10
+      };
+
+      const res = await callApi("createAssignment", payload);
+
+      btn.disabled = false;
+      btn.innerHTML = `<i class="fa-solid fa-cloud-arrow-up mr-2"></i> เผยแพร่การบ้านไปยังห้องเรียน`;
+
+      if (res.success) {
+        showToast(res.message, "success");
+        document.getElementById('hwTitle').value = '';
+        document.getElementById('hwFileUrl').value = '';
+        document.getElementById('hwDueDate').value = '';
+        document.getElementById('hwDesc').value = '';
+        document.getElementById('hwAllowLate').checked = false;
+
+        loadTeacherInitialDashboard();
+        switchTeacherTab('classAtt');
+      } else {
+        showToast(res.message, "error");
+      }
+    }
+
+    // ฟังก์ชันติดตามงาน & ให้คะแนน (Tab 3)
+    function switchTrackTab(tab) {
+      const isSub = tab === 'submitted';
+      document.getElementById('boxSubmitted').classList.toggle('hidden', !isSub);
+      document.getElementById('boxMissing').classList.toggle('hidden', isSub);
+
+      document.getElementById('tabSubBtn').className = isSub
+        ? "py-2.5 px-4 text-xs font-bold text-brand-600 border-b-2 border-brand-600 flex items-center space-x-1.5"
+        : "py-2.5 px-4 text-xs font-bold text-slate-400 hover:text-slate-600 flex items-center space-x-1.5";
+
+      document.getElementById('tabMissBtn').className = !isSub
+        ? "py-2.5 px-4 text-xs font-bold text-rose-600 border-b-2 border-rose-600 flex items-center space-x-1.5"
+        : "py-2.5 px-4 text-xs font-bold text-slate-400 hover:text-rose-500 flex items-center space-x-1.5";
+    }
+
+    async function loadAssignmentSubmissionsAndMissing() {
+      const hwId = document.getElementById('teacherAssignmentDropdown').value;
+      const container = document.getElementById('assignmentTrackingContainer');
+      if (!hwId) {
+        container.classList.add('hidden');
+        return;
+      }
+      container.classList.remove('hidden');
+
+      const boxSub = document.getElementById('boxSubmitted');
+      const ulMiss = document.getElementById('missingListUl');
+      boxSub.innerHTML = '<p class="text-xs text-slate-400 py-6 text-center"><i class="fa-solid fa-spinner fa-spin mr-1.5"></i> กำลังโหลดข้อมูลการส่งงาน...</p>';
+      ulMiss.innerHTML = '';
+
+      const res = await callApi("getAssignmentSubmissions", { assignmentId: hwId });
+      if (res.success) {
+        const subs = res.submissions || [];
+        const miss = res.missing || [];
+
+        document.getElementById('countSubmitted').innerText = subs.length;
+        document.getElementById('countMissing').innerText = miss.length;
+
+        if (subs.length === 0) {
+          boxSub.innerHTML = '<p class="text-xs text-slate-400 py-6 text-center">ยังไม่มีนักเรียนส่งงานในรายการนี้</p>';
+        } else {
+          boxSub.innerHTML = subs.map(sub => `
+            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+              <div class="flex justify-between items-center text-xs">
+                <span class="font-bold text-slate-800">${sub.studentName} (${sub.studentId})</span>
+                <span class="text-slate-400 text-[11px]">${sub.submittedAt || ''}</span>
+              </div>
+              ${sub.submissionText ? `<p class="text-xs text-slate-600 bg-white p-2.5 rounded-lg border border-slate-100">${sub.submissionText}</p>` : ''}
+              <div class="flex flex-wrap justify-between items-center gap-2 pt-1 text-xs">
+                <div>
+                  ${sub.fileUrl ? `<a href="${sub.fileUrl}" target="_blank" class="text-brand-600 hover:underline font-semibold text-xs inline-flex items-center gap-1"><i class="fa-solid fa-arrow-up-right-from-square"></i> เปิดดูไฟล์แนบ</a>` : '<span class="text-slate-400 text-[11px]">ไม่มีไฟล์แนบ</span>'}
+                </div>
+                <div class="flex items-center space-x-2">
+                  <input type="text" id="score_${sub.submissionId}" value="${sub.score === '-' ? '' : sub.score}" placeholder="คะแนน" class="w-16 px-2 py-1 bg-white border border-slate-200 rounded-lg text-center text-xs font-num">
+                  <button onclick="saveGrade('${sub.submissionId}')" class="px-3 py-1 bg-brand-600 hover:bg-brand-700 text-white rounded-lg text-xs font-semibold transition active:scale-95">ให้คะแนน</button>
+                </div>
+              </div>
+            </div>
+          `).join('');
+        }
+
+        if (miss.length === 0) {
+          ulMiss.innerHTML = '<li class="py-3 text-center text-emerald-600 font-medium">ยอดเยี่ยม! ส่งงานครบทุกคนแล้ว</li>';
+        } else {
+          ulMiss.innerHTML = miss.map(st => `
+            <li class="py-2 flex justify-between items-center">
+              <span class="font-semibold text-slate-700">${st.name}</span>
+              <span class="font-mono text-slate-400 text-[11px]">${st.id} • ${st.classRoom || ''}</span>
+            </li>
+          `).join('');
+        }
+      } else {
+        boxSub.innerHTML = `<p class="text-xs text-rose-500 py-4 text-center">${res.message || 'เกิดข้อผิดพลาด'}</p>`;
+      }
+    }
+
+    async function saveGrade(submissionId) {
+      const score = document.getElementById(`score_${submissionId}`).value.trim();
+      if (!score) return showToast("กรุณากรอกคะแนนก่อนบันทึก", "warning");
+
+      const res = await callApi("gradeWork", { submissionId, score, feedback: "ตรวจแล้ว" });
+      showToast(res.message, res.success ? "success" : "error");
     }
 
     // ==========================================
@@ -916,13 +1032,13 @@
         <div class="p-4 md:p-5 bg-white border border-slate-200/80 rounded-2xl space-y-2 hover:border-slate-300 transition shadow-xs">
           <div class="flex justify-between items-center text-xs">
             <span class="bg-indigo-50 text-brand-700 px-2.5 py-0.5 rounded-lg font-bold border border-indigo-100">${item.subject}</span>
-            <span class="text-slate-500 font-num text-[11px]"><i class="fa-regular fa-clock mr-1"></i> ส่งก่อน: ${item.dueDate}</span>
+            <span class="text-slate-500 font-num text-[11px]"><i class="fa-regular fa-clock mr-1"></i> กำหนดส่ง: ${item.dueDate}</span>
           </div>
           <h4 class="font-bold text-slate-900 text-sm md:text-base">${item.title}</h4>
           <p class="text-xs text-slate-500 leading-relaxed">${item.description || '-'}</p>
           <div class="pt-3 flex justify-between items-center border-t border-slate-100">
             <span class="text-xs font-semibold text-slate-400">คะแนนเต็ม <b class="text-slate-700 font-num">${item.maxScore}</b> คะแนน</span>
-            ${item.submission ? `<span class="text-xs text-emerald-600 font-bold"><i class="fa-solid fa-circle-check mr-1"></i> ส่งแล้ว</span>` :
+            ${item.submission ? `<span class="text-xs text-emerald-600 font-bold"><i class="fa-solid fa-circle-check mr-1"></i> ส่งแล้ว (คะแนน: ${item.submission.score})</span>` :
               `<button onclick="openSubmitModal('${item.id}', '${item.title}')" class="text-xs bg-brand-600 hover:bg-brand-700 text-white font-semibold px-4 py-1.5 rounded-xl transition active:scale-95">ส่งงาน</button>`}
           </div>
         </div>
